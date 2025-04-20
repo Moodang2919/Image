@@ -11,7 +11,7 @@ with open('model.pkl','rb') as f:
     
 st.title("Image Classification with MobileNetV2 by Boonnisa Tangjitpermkwamdee")
 
-upload_file = st.fire_uploader("Upload image:",type=["jpg", "jpeg", "png"])
+upload_file = st.file_uploader("Upload image:",type=["jpg", "jpeg", "png"])
 
 if upload_file is not None:
     #display a image on screen
