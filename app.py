@@ -1,5 +1,5 @@
 import streamlit as st
-from tensorflow.keras.applications.mobilenet_v2 import MobileNetV2, decode_predictions, preprocess_input
+from tensorflow.keras.applications.mobilenet_v2 import decode_predictions, preprocess_input
 from tensorflow.keras.preprocessing import image
 import numpy as np
 from PIL import Image
@@ -11,7 +11,7 @@ with open('model.pkl','rb') as f:
     
 st.title("Image Classification with MobileNetV2 by Boonnisa Tangjitpermkwamdee")
 
-upload_file = st.fire_uploader("Upload image",type=["jpg","jpeg","png"])
+upload_file = st.fire_uploader("Upload image",type=["jpg","png","jpeg"])
 
 if upload_file is not None:
     #display a image on screen
